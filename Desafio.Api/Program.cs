@@ -21,7 +21,7 @@ namespace Desafio.Api
 
             var acessCollection = new AcessCollection();
             //acessCollection.ReadDocumentByFilter();
-            acessCollection.UpdateDocumment();
+            acessCollection.DeleteDocument();
         }
     }
 }

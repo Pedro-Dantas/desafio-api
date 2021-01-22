@@ -94,8 +94,12 @@ namespace Desafio.Api
 
         public void DeleteDocument()
         {
+            var constructor = Builders<Livro>.Filter;
+            var fliterCondition = constructor.Eq(x => x.Autor, "Machado de Assis");
 
+            var biblioteca = _collection.Find(fliterCondition).ToList();
+
+            _collection.DeleteOne(fliterCondition);
         }
-
     }
 }
